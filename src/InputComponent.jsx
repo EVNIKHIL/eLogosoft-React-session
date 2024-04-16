@@ -28,15 +28,15 @@ const InputComponent = () => {
         </label>
       </div>
       <div>
-        <label htmlFor="secondName">
-          Second name
+        <label htmlFor="lastName">
+          Last name
           <input
             onChange={(e) => {
               setLastName(e.target.value);
             }}
             value={lastName}
             type="text"
-            id="secondName"
+            id="lastName"
           />
         </label>
       </div>
