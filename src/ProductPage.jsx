@@ -2,16 +2,16 @@ import ShippingForm from "./ShippingForm";
 
 // eslint-disable-next-line react/prop-types
 export default function ProductPage({ productId, referrerId, theme }) {
-  const handleSubmit = (orderDetails) => {
-    post("/product/" + productId + "/buy", {
-      referrerId,
-      orderDetails,
-    });
-  };
+  //   const handleSubmit = (orderDetails) => {
+  //     post("/product/" + productId + "/buy", {
+  //       referrerId,
+  //       orderDetails,
+  //     });
+  //   };
 
   return (
     <div className={theme}>
-      <ShippingForm onSubmit={handleSubmit} />
+      <ShippingForm />
     </div>
   );
 }
