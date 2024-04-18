@@ -29,6 +29,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <div className="main">
+      <nav className="nav-links">
+        <a href="/">Home</a>
+        <a href="/profiles">Profile</a>
+      </nav>
       <RouterProvider router={router} />
     </div>
   </React.StrictMode>
