@@ -1,11 +1,16 @@
 import "./App.css";
 import FormikComponent from "./Formik";
+// import FormikHook from "./FormikHook";
 
 function App() {
+  const onValidationChange = (isValid) => {
+    console.log("parent", isValid);
+  };
   return (
     <>
       <h1>Hello react</h1>
-      <FormikComponent />
+      <FormikComponent onValidationChange={onValidationChange} />
+      {/* <FormikHook onValidationChange={onValidationChange} /> */}
     </>
   );
 }
