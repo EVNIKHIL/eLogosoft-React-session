@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+div.main {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+div.profile-list {
+  display: flex;
+  flex-direction: column;
+}
