@@ -3,7 +3,6 @@ import AddTask from "./AddTask";
 import "./App.css";
 import TaskList from "./TaskList";
 
-let nextId = 3;
 const initialTasks = [
   { id: 0, text: "Buy grocery", done: true },
   { id: 1, text: "Finish Assignment", done: false },
@@ -11,11 +10,13 @@ const initialTasks = [
   { id: 3, text: "Write Blog", done: false },
 ];
 
-function tasksReducer(tasks, action) {
+let nextId = initialTasks.length;
+
+function tasksReducer(state, action) {
   switch (action.type) {
     case "added": {
       return [
-        ...tasks,
+        ...state,
         {
           id: action.id,
           text: action.text,
@@ -24,7 +25,7 @@ function tasksReducer(tasks, action) {
       ];
     }
     case "changed": {
-      return tasks.map((t) => {
+      return state.map((t) => {
         if (t.id === action.task.id) {
           return action.task;
         } else {
@@ -33,7 +34,7 @@ function tasksReducer(tasks, action) {
       });
     }
     case "deleted": {
-      return tasks.filter((t) => t.id !== action.id);
+      return state.filter((t) => t.id !== action.id);
     }
     default: {
       throw Error("Unknown action: " + action.type);
