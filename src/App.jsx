@@ -1,9 +1,25 @@
+import { useState } from "react";
 import "./App.css";
+import ProductPage from "./ProductPage";
 
 function App() {
+  const [isDark, setIsDark] = useState(false);
   return (
     <>
-      <h1>Hello react</h1>
+      <label>
+        <input
+          type="checkbox"
+          checked={isDark}
+          onChange={(e) => setIsDark(e.target.checked)}
+        />
+        Dark mode
+      </label>
+      <hr />
+      <ProductPage
+        referrerId="wizard_of_oz"
+        productId={123}
+        theme={isDark ? "dark" : "light"}
+      />
     </>
   );
 }
