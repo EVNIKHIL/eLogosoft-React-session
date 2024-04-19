@@ -1,14 +1,12 @@
 import { useGetPokemonByNameQuery } from "./store/rtkQuery";
 
-const Counter = () => {
+const Counter2 = () => {
   const { data, isLoading } = useGetPokemonByNameQuery("bulbasaur");
-
-  console.log(data);
 
   if (isLoading)
     return (
       <>
-        <h1>Counter 1</h1>
+        <h1>Counter 2</h1>
         <h2>Loading</h2>
       </>
     );
@@ -16,11 +14,11 @@ const Counter = () => {
   if (data) {
     return (
       <>
-        <h1>Counter 1</h1>
+        <h1>Counter 2</h1>
         <h2>{data.name}</h2>
       </>
     );
   }
 };
 
-export default Counter;
+export default Counter2;
