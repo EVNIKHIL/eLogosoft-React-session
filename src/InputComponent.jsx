@@ -3,15 +3,11 @@ import { useEffect, useState } from "react";
 const InputComponent = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [fullName, setFullName] = useState("");
-
-  useEffect(() => {
-    setFullName(`${firstName} ${lastName}`);
-  }, [firstName, lastName]);
+  // const [fullName, setFullName] = useState("");
 
   return (
     <div>
-      <div>Full name: {fullName}</div>
+      <div>Full name: ---</div>
       <div>
         <label htmlFor="firstName">
           First name
