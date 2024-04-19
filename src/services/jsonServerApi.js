@@ -8,9 +8,6 @@ export const jsonServerApi = createApi({
     getAlbums: builder.query({
       query: (page = 1) => {
         const from = (page - 1) * 10;
-        const to = page * 10;
-
-        console.log(from, to, page);
         return `albums?_start=${from}&_limit=10`;
       },
       providesTags: ["Albums"],

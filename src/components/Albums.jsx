@@ -1,10 +1,10 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
-  useGetAlbumsQuery,
   useDeleteAlbumMutation,
+  useGetAlbumsQuery,
   useUpdateAlbumMutation,
 } from "../services/jsonServerApi";
-import { useNavigate, Link } from "react-router-dom";
 
 export default function Albums() {
   const navigate = useNavigate();
