@@ -9,8 +9,6 @@ const InputComponent = () => {
     setFullName(`${firstName} ${lastName}`);
   }, [firstName, lastName]);
 
-  //   const fullName = `${firstName} ${lastName}`;
-
   return (
     <div>
       <div>Full name: {fullName}</div>
