@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 export default function TaskList({ tasks, onChangeTask, onDeleteTask }) {
+  if (tasks.length === 0) {
+    return <h5>No items</h5>;
+  }
   return (
     <ul>
       {tasks.map((task) => (
