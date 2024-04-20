@@ -1,8 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-// import Login from "./Login";
+import Login from "./Login";
 
-const Login = lazy(() => import("./Login"));
+// const Login = lazy(() => import("./Login"));
 
 const Publicroute = ({ setAuthenticated }) => {
   return (

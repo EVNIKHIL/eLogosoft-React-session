@@ -1,15 +1,15 @@
 import { Suspense, lazy } from "react";
 import Navbar from "./Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
-// import Profile from "./Profile";
-// import About from "./About";
-// import Contact from "./Contact";
-// import Faqs from "./Faqs";
+import Profile from "./Profile";
+import About from "./About";
+import Contact from "./Contact";
+import Faqs from "./Faqs";
 
-const Profile = lazy(() => import("./Profile"));
-const About = lazy(() => import("./About"));
-const Contact = lazy(() => import("./Contact"));
-const Faqs = lazy(() => import("./Faqs"));
+// const Profile = lazy(() => import("./Profile"));
+// const About = lazy(() => import("./About"));
+// const Contact = lazy(() => import("./Contact"));
+// const Faqs = lazy(() => import("./Faqs"));
 
 const Loading = () => {
   <h1>Loading...</h1>;
