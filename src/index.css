@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+div.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}

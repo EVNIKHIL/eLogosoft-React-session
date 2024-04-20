@@ -44,7 +44,7 @@ const FormikComponent = ({ onValidationChange }) => {
 
           return (
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="form-item">
                 <input
                   name="name"
                   onChange={handleChange}
@@ -53,7 +53,7 @@ const FormikComponent = ({ onValidationChange }) => {
                 />
                 {errors.name && touched.name && errors.name}
               </div>
-              <div>
+              <div className="form-item">
                 <input
                   name="email"
                   onChange={handleChange}
